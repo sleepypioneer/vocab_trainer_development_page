@@ -7,7 +7,7 @@
         <title>Vocab Trainer - @sleepypioneer </title>
 
         <!-- Add icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
         <!-- Add Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nova+Round|Numans|Orbitron|NTR|Poiret+One" rel="stylesheet">
@@ -34,45 +34,93 @@
                                                                    
         <nav class="webpage">
             <ul class="rowNav topbar" style="display: flex;">
-                <li id="home">
-                    <i class="fa fa-home" aria-hidden="true"></i>
+                <li>
+                    
                 </li>
-                <!--<li id="timer" style="font-size: large;"></li>-->
-                <li id="score">
-                    <i class="fa fa-trophy" aria-hidden="true"></i>
-                    <h4> <span id="actualScore"></span>pts</h4>
+                
+                <li>
+                    
                 </li>
-                <li id="account">
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <li id="social">
+                     <div id="socialNav">
+                        <nav>
+                            <ul>
+                                <li> <a href="https://github.com/sleepypioneer" target="blank" ><i class="fab fa-github-square"></i> </a> </li>
+                                <li> <a href="https://twitter.com/sleepypioneer" target="blank"><i class="fab fa-twitter-square"></i></a> </li>
+                                <li> <a href="https://de.linkedin.com/in/jessica0greene" target="blank"> <i class="fab fa-linkedin"></i> </a> </li>
+                          </ul>
+                        </nav>
+                    </div>
                 </li>
             </ul>
         </nav>
         <div id="mainContainer" class="containerWhite">
-            <div class="section">
+            
+            <div class="section" id="intro">
                 <div class="containerWhite">
-                    <h2>My first APP </h2>
-                    <p> some text about my app </p>
+                    <div style="width: 50%;">
+                        <h1 class="orange">Vocab Trainer</h1>
+                        <h5 class="italic"> ~ Improve your Vocab on the move ~ </h5>
+                        <p class="italic"> A offline accessible Progressive Web App for training German vocabulary on your mobile.</p>
+                        
+                        <div>
+                            <h3 class="orange">User Stories: </h3>
+                            <ul>
+                                <li>
+                                    <h5>App for training vocabulary through flash cards where the user types an answer.</h5>
+                                </li>
+                                <li>
+                                    <h5>Offline accessible </h5>
+                                </li>
+                                <li>
+                                    <h5>Progressive Web App Manifest to allow user to add to home screen and view as native app.</h5>
+                                </li>
+                                <li>
+                                      <h5>User can add thier own vocabulary and save these lists to the local storage (IndexedDB).</h5>
+                                </li>
+                                <li>
+                                     <h5>A user account can be saved to track the score count.</h5>
+                                </li>
+                                <li>
+                                    <h5>Vocabulary lists can be downloaded from the main DB and are then editable. </h5>
+                                </li>
+                                <li>
+                                    <h5>Currently user data is not pushed to the main Data base and is only saved locally.</h5>
+                                </li>
+                                <li>
+                                    <h5>A timer is inlcuded for timed sessions and goal setting.</h5>
+                                </li>
+                                <li>
+                                    <h5>Sound FX and styling choices (Night learning mode) can be changed on the account page.</h5>
+                                </li>
+                                <li>
+                                    <h5>When viewed on larger screens the url points to this development page.</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </div>
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section" id="appFunctions">
                 <div class="containerGreen">
                     <img src="assets/imgs/localhost_vocab_trainer_(Nexus%205X)%20(2).png"/>
                     <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207%20Plus)%20(2).png"/>
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section" id="appDesign">
                 <img src="assets/imgs/example2.jpg"/>
                 <img src="assets/imgs/example5.jpg"/>
             </div>
             
-           <div class="section">
+           <div class="section" id="dataStorage">
                 <img src="assets/imgs/appflowDiagram.png"/>
                 <img src="assets/imgs/scoreSystem2.png"/>
             </div>
             
-            <div class="section">
+            <div class="section" id="futurePlans">
                 <div class="containerOrange">
                     <img src="assets/imgs/localhost_vocab_trainer_(Nexus%205X)%20(2).png"/>
                     <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207%20Plus)%20(2).png"/>
