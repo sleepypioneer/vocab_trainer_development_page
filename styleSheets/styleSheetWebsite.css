@@ -61,7 +61,7 @@ body {
 }
 
 img {
-    width: 400px;
+    width: 40vw;
     height: auto;
     margin: 0.5em;
 }
@@ -140,6 +140,7 @@ nav.webpage {
     position: relative;
     width: 100%;
     display: flex;
+    color: white;
 }
 
 .containerGreen {
@@ -148,6 +149,7 @@ nav.webpage {
     padding: 20px;
     position: relative;
     width: 100%;
+    color: white;
 }
 
 /* Social Nav */
@@ -186,6 +188,11 @@ a {
 /* italic text class */
 .italic {
     font-style: italic;    
+}
+
+/* center text class */
+.center {
+   text-align: center;
 }
 
 /* orange text class */

@@ -1,305 +1,301 @@
 <!DOCTYPE html>
-    <html>
+<html>
 
-    <head>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale =1.0">
-        <title>Vocab Trainer - @sleepypioneer </title>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0">
+    <title>Vocab Trainer - @sleepypioneer </title>
 
-        <!-- Add icon library -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Add icon library -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-        <!-- Add Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nova+Round|Numans|Orbitron|NTR|Poiret+One" rel="stylesheet">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nova+Round|Numans|Orbitron|NTR|Poiret+One" rel="stylesheet">
 
-        <!-- Add Style Sheet -->
-        <link rel="stylesheet" type="text/css" href="styleSheets/styleSheetWebsite.css">
-        
-        
-    </head>
+    <!-- Add Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="styleSheets/styleSheetWebsite.css">
 
-    <body onresize="lookForResize()">
-    
-        <noscript> This site needs JavaScript to run </noscript>
-        
-        <script type="text/javascript">
-            function lookForResize(){
-              if (document.body.getBoundingClientRect().width < 1050) {
-                window.location.replace("https://sleepypioneer.github.io/vocab_trainer/");
-              }
+
+</head>
+
+<body onresize="lookForResize()">
+
+    <noscript> This site needs JavaScript to run </noscript>
+
+    <script type="text/javascript">
+        function lookForResize() {
+            if (document.body.getBoundingClientRect().width < 1050) {
+                //window.location.replace("https://sleepypioneer.github.io/vocab_trainer/");
+                window.location.replace("http://localhost/vocab_trainer/");
             }
-            //run on load
-            lookForResize();
-        </script>
-                                                                   
-        <nav class="webpage">
-            <ul class="rowNav topbar" style="display: flex;">
-                <li>
-                    
-                </li>
-                
-                <li>
-                    
-                </li>
-                <li id="social">
-                     <div id="socialNav">
-                        <nav>
-                            <ul>
-                                <li> <a href="https://github.com/sleepypioneer" target="blank" ><i class="fab fa-github-square"></i> </a> </li>
-                                <li> <a href="https://twitter.com/sleepypioneer" target="blank"><i class="fab fa-twitter-square"></i></a> </li>
-                                <li> <a href="https://de.linkedin.com/in/jessica0greene" target="blank"> <i class="fab fa-linkedin"></i> </a> </li>
-                          </ul>
-                        </nav>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <div id="mainContainer" class="containerWhite">
-            
-            <div class="section" id="intro">
-                <div class="containerWhite">
-                    <div style="width: 50%;">
-                        <h1 class="orange">Vocab Trainer</h1>
-                        <h5 class="italic"> ~ Improve your Vocab on the move ~ </h5>
-                        <p class="italic"> A offline accessible Progressive Web App for training German vocabulary on your mobile.</p>
-                        
-                        <div>
-                            <h3 class="orange">User Stories: </h3>
-                            <ul>
-                                <li>
-                                    <h5>App for training vocabulary through flash cards where the user types an answer.</h5>
-                                </li>
-                                <li>
-                                    <h5>Offline accessible </h5>
-                                </li>
-                                <li>
-                                    <h5>Progressive Web App Manifest to allow user to add to home screen and view as native app.</h5>
-                                </li>
-                                <li>
-                                      <h5>User can add thier own vocabulary and save these lists to the local storage (IndexedDB).</h5>
-                                </li>
-                                <li>
-                                     <h5>A user account can be saved to track the score count.</h5>
-                                </li>
-                                <li>
-                                    <h5>Vocabulary lists can be downloaded from the main DB and are then editable. </h5>
-                                </li>
-                                <li>
-                                    <h5>Currently user data is not pushed to the main Data base and is only saved locally.</h5>
-                                </li>
-                                <li>
-                                    <h5>A timer is inlcuded for timed sessions and goal setting.</h5>
-                                </li>
-                                <li>
-                                    <h5>Sound FX and styling choices (Night learning mode) can be changed on the account page.</h5>
-                                </li>
-                                <li>
-                                    <h5>When viewed on larger screens the url points to this development page.</h5>
-                                </li>
-                            </ul>
-                        </div>
-                    
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section" id="appInterface">
-                <div class="containerGreen" style="display: flex;">
-                    <div style="width: 48%; display: inline-block; margin: auto;">
-                        <h3>Intuiative layout navigates user quickly</h3>
-                            <ul>
-                                <li>
-                                    <h5>1: Home button to return to home page</h5>
-                                </li>
-                                <li>
-                                    <h5>2: Current Score displayed </h5>
-                                </li>
-                                <li>
-                                    <h5>3: Account button to go to accounts page, there an acccount can be added or deleted, also includes settings for sound and style. (Account information is saved in local storage)</h5>
-                                </li>
-                                <li>
-                                      <h5>4: Vocab Trainer (without timer) - goes through to page to select which Vocab to train</h5>
-                                </li>
-                                <li>
-                                     <h5>5: Timer - to set timer and start time sessions these are saved to the users accounts and can be used for daily goals </h5>
-                                </li>
-                                <li>
-                                    <h5>6: Add Vocab - user can add their own vocab, make new vocab lists or download lists from the Server's Database which are then editable. (Local Lists are saved in local storage)</h5>
-                                </li>
-                                <li>
-                                    <h5>7: Score board and stats for current user, if no account prompts user to make an account.</h5>
-                                </li>
-                            </ul>
-                    </div>
-                    <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                            <img src="assets/imgs/appflowDiagram.png" style="margin: 0.5em;">
-                            <img src="assets/imgs/scoreSystem2.png" style="margin: 0.5em;">
-                    </div>
-    
-                    
-                </div>
-            </div>
+        }
+        //run on load
+        lookForResize();
+    </script>
 
-            <div class="section" id="appDesign">
-                <div style="width: 48%; display: inline-block; margin: auto; ">
-                        <h3>App Design and UI </h3>
-                            <ul>
-                                <li>
-                                    <h5>clean lines and easy to navigate icons</h5>
-                                </li>
-                                <li>
-                                     <h5>Based on real life flash cards for learning familiarity</h5>
-                                </li>
-                                <li>
-                                    <h5>Color scheme picked to enhance concentration and encourage learning</h5>
-                                </li>
-                                <li>
-                                    <h5>Night mode for learning in low light conditions</h5>
-                                </li>
-                                <li>
-                                      <h5>Sounds navigate the user</h5>
-                                </li>
-                                <li>
-                                     <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                            </ul>
-                    </div>
-                    <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                        <img src="assets/imgs/example2.jpg"/>
-                        <img src="assets/imgs/example5.jpg"/>
-                    </div>
-            </div>
-            
-            <div class="section" id="whyPWA">
-                <div class="containerGreen" style="display: flex;">
-                    <div style="width: 48%; display: inline-block; margin: auto; color:white;">  
-                        <h3>Why a Progressive Web App</h3>
-                        <img src="assets/imgs/current_performance_rating.PNG"/>
-                            <ul>
-                                <li>
-                                    <h5>Goal Setting and reminder service (ie 10 mins everyday with notification at 10am to remind user)</h5>
-                                </li>
-                                <li>
-                                    <h5>User Data sent to the Server's database for storage</h5>
-                                </li>
-                                <li>
-                                    <h5>Logic for not repeating words they guess correctly quickly.</h5>
-                                </li>
-                                <li>
-                                      <h5>Measurement of lists being downloaded to scale popularity and monitor user behaviour to improve service.</h5>
-                                </li>
-                                <li>
-                                     <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                            </ul>
-                    </div>
-                    <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                        <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207%20Plus)%20(1).png"/>
-                        
-                    </div>
-                </div>
-            </div>
-            
-           <div class="section" id="dataStorage">
-                <div style="width: 48%; display: inline-block; margin: auto;">
-                        <h3>Further developments</h3>
-                            <ul>
-                                <li>
-                                    <h5>Goal Setting and reminder service (ie 10 mins everyday with notification at 10am to remind user)</h5>
-                                </li>
-                                <li>
-                                    <h5>User Data sent to the Server's database for storage</h5>
-                                </li>
-                                <li>
-                                    <h5>Logic for not repeating words they guess correctly quickly.</h5>
-                                </li>
-                                <li>
-                                      <h5>Measurement of lists being downloaded to scale popularity and monitor user behaviour to improve service.</h5>
-                                </li>
-                                <li>
-                                     <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                            </ul>
-                    </div>
-                    <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                        <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207%20Plus)%20(1).png"/>
-                        
-                    </div>
-            </div>
-            
-            <div class="section" id="futurePlans">
-                <div class="containerOrange">
-                    <div style="width: 48%; display: inline-block; margin: auto; color:white;">
-                        <h3>Further developments</h3>
-                            <ul>
-                                <li>
-                                    <h5>Goal Setting and reminder service (ie 10 mins everyday with notification at 10am to remind user)</h5>
-                                </li>
-                                <li>
-                                    <h5>User Data sent to the Server's database for storage</h5>
-                                </li>
-                                <li>
-                                    <h5>Logic for not repeating words they guess correctly quickly.</h5>
-                                </li>
-                                <li>
-                                      <h5>Measurement of lists being downloaded to scale popularity and monitor user behaviour to improve service.</h5>
-                                </li>
-                                <li>
-                                     <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                                <li>
-                                    <h5></h5>
-                                </li>
-                            </ul>
-                    </div>
-                    <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                        <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207%20Plus)%20(1).png"/>
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <footer>
+    <nav class="webpage">
+        <ul class="rowNav topbar" style="display: flex;">
+            <li>
+
+            </li>
+
+            <li>
+
+            </li>
+            <li id="social">
                 <div id="socialNav">
-				<nav>
-					<ul>
-						<li> <a href="https://github.com/sleepypioneer" target="blank" > <img class="logo" src="https://pbs.twimg.com/media/BeM2XAiCQAA91O-.png:large" alt="gitHub logo"> <h4 class="socialNav"> Visit me on GitHub </h4></a> </li>
-						<li> <a href="https://twitter.com/sleepypioneer" target="blank"> <img class="logo" src="https://image.freepik.com/free-icon/twitter-logo_318-40459.jpg" alt="Twitter logo"> <h4 class="socialNav"> Follow me on Twitter </h4></a> </li>
-						<li> <a href="https://de.linkedin.com/in/jessica0greene" target="blank"> <img class="logo" src="https://image.freepik.com/free-icon/linked-in-logo-on-black-square-background_318-40265.jpg" alt="Linked in logo"> <h4 class="socialNav"> Add me on Linked in </h4></a> </li>
-				  </ul>
-				</nav>
-			</div>
-            </footer>
-        </div>
-        
-        <div class="phoneContainer">
-            <div class="smartphone">
-                  <div class="content">
-                    <iframe src="https://sleepypioneer.github.io/vocab_trainer/" style="width:100%;border:none;height:100%" />
-                  </div>
+                    <nav>
+                        <ul>
+                            <li> <a href="https://github.com/sleepypioneer" target="blank"><i class="fab fa-github-square"></i> </a> </li>
+                            <li> <a href="https://twitter.com/sleepypioneer" target="blank"><i class="fab fa-twitter-square"></i></a> </li>
+                            <li> <a href="https://de.linkedin.com/in/jessica0greene" target="blank"> <i class="fab fa-linkedin"></i> </a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="mainContainer" class="containerWhite">
+
+        <div class="section" id="intro">
+            <div class="containerWhite">
+                <div style="width: 50%;">
+                    <h1 class="orange center">Vocab Trainer</h1>
+                    <h5 class="italic center"> ~ Improve your Vocab on the move ~ </h5>
+                    <p class="italic center"> A offline accessible Progressive Web App for training German vocabulary on your mobile.</p>
+
+                    <div style="margin-top: 2em;">
+                        <h3 class="orange">User Stories: </h3>
+                        <ul>
+                            <li>
+                                <h5>App for training vocabulary through flash cards where the user types an answer.</h5>
+                            </li>
+                            <li>
+                                <h5>Offline accessible </h5>
+                            </li>
+                            <li>
+                                <h5>Progressive Web App Manifest to allow user to add to home screen and view as native app.</h5>
+                            </li>
+                            <li>
+                                <h5>User can add thier own vocabulary and save these lists to the local storage (IndexedDB).</h5>
+                            </li>
+                            <li>
+                                <h5>A user account can be saved to track the score count.</h5>
+                            </li>
+                            <li>
+                                <h5>Vocabulary lists can be downloaded from the main DB and are then editable. </h5>
+                            </li>
+                            <li>
+                                <h5>Currently user data is not pushed to the main Data base and is only saved locally.</h5>
+                            </li>
+                            <li>
+                                <h5>A timer is inlcuded for timed sessions and goal setting.</h5>
+                            </li>
+                            <li>
+                                <h5>Sound FX and styling choices (Night learning mode) can be changed on the account page.</h5>
+                            </li>
+                            <li>
+                                <h5>When viewed on larger screens the url points to this development page.</h5>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </div>
-        
-    </body>
+
+        <div class="section" id="whyPWA">
+            <div class="containerGreen" style="display: flex;">
+                <div style="width: 48%; display: inline-block; margin: auto; color:white;">
+                    <h2>Why a Progressive Web App</h2>
+                    <p class="italic center"> A new web Experience that works for everyone. Behaves and feels like a native App but is light weight (no large installation files), quick and works offline (/ with lowfi). </p>
+                    <ul>
+                        <li>
+                            <h5>Boost mobile engagement: on average, 3 times more visitors than native apps.</h5>
+                        </li>
+                        <li>
+                            <h5>Instantaneously installed directly on your users' home screens, without them having to download anything or go through the stores. </h5>
+                        </li>
+                        <li>
+                            <h5>Incomparable lightness also eliminates any memory constraints a device may have at the time of installation.</h5>
+                        </li>
+                        <li>
+                            <h5>Loads quick on first visit.</h5>
+                        </li>
+                        <li>
+                            <h5>Works offline through a service worker.</h5>
+                        </li>
+                        <li>
+                            <h5>A mobile-first approach when building your app, with an emphasis on accessibility.</h5>
+                        </li>
+                    </ul>
+                    <img src="assets/imgs/current_performance_rating.PNG" style="margin-top: 2em;">
+                </div>
+                <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
+                    <img src="assets/imgs/pwadiagram.png" />
+                    <img src="assets/imgs/pwa_canIUse.JPG"/>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="section" id="appUX" style="display:flex; flex-direction:column;">
+            <div style="display:flex;padding: 1em;" >
+                <div  style="display:flex;padding: 1em; width: 48%; display: inline-block; margin: auto;">
+                    <h3>Intuiative layout navigates user quickly</h3>
+                    <ul>
+                        <li>
+                            <h5>1: Home button to return to home page</h5>
+                        </li>
+                        <li>
+                            <h5>2: Current Score displayed </h5>
+                        </li>
+                        <li>
+                            <h5>3: Account button to go to accounts page, there an acccount can be added or deleted, also includes settings for sound and style. (Account information is saved in local storage)</h5>
+                        </li>
+                        <li>
+                            <h5>4: Vocab Trainer (without timer) - goes through to page to select which Vocab to train</h5>
+                        </li>
+                        <li>
+                            <h5>5: Timer - to set timer and start time sessions these are saved to the users accounts and can be used for daily goals </h5>
+                        </li>
+                        <li>
+                            <h5>6: Add Vocab - user can add their own vocab, make new vocab lists or download lists from the Server's Database which are then editable. (Local Lists are saved in local storage)</h5>
+                        </li>
+                        <li>
+                            <h5>7: Score board and stats for current user, if no account prompts user to make an account.</h5>
+                        </li>
+                        <li>
+                            <h5>8: Simple Scoring System to encourage user in their progress</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
+                   <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207edit).png" style="width: 30vw;margin: auto;">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <img src="assets/imgs/appflowDiagram.png" style="margin: 0.5em;">
+                <img src="assets/imgs/scoreSystem2.png" style="margin: 0.5em;">
+            </div>
+        </div>
+
+        <div class="section" id="appUI">
+            <div class="containerGreen" style="display: flex;">
+                <div style="width: 48%; display: inline-block; margin: auto; ">
+                    <h2>App Design and UI </h2>
+                    <ul>
+                        <li>
+                            <h5>clean lines and easy to navigate icons</h5>
+                        </li>
+                        <li>
+                            <h5>Based on real life flash cards for learning familiarity</h5>
+                        </li>
+                        <li>
+                            <h5>Color scheme picked to enhance concentration and encourage learning</h5>
+                        </li>
+                        <li>
+                            <h5>Night mode for learning in low light conditions</h5>
+                        </li>
+                        <li>
+                            <h5>Sounds navigate the user</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div style="width: 48%; display: inline-block; margin: auto; text-align: center;">
+                    <img style="width:20vw;" src="assets/imgs/example2.jpg" />
+                    <img style="width:20vw;" src="assets/imgs/example5.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="dataStorage">
+            <div style="display:flex;padding: 1em;" >
+                <div style="width: 48%; display: inline-block; margin: auto;">
+                    <h2>Data Storage</h2>
+                    <ul>
+                        <li>
+                            <h5>Local Vocab is stored in IndexedDB so it is accessible regardless of connection.</h5>
+                        </li>
+                        <li>
+                            <h5>The server database has Lists users can either use while online or download for use offline and also be able to edit.</h5>
+                        </li>
+                        <li>
+                            <h5>If no local lists have been created and there is no connection to the Database then the user is prompt to make a list themselves.</h5>
+                        </li>
+                        <li>
+                            <h5>Adding words to a list is quick and easy, the app remmebers which list you have last added to and selects that as the option for the next word.</h5>
+                        </li>
+                        <li>
+                            <h5><span class="italic">**Not Currectly Working***</span> Lists are editable and words can be deleted, if a word needs changing simply save the new variant over the old version.</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="width: 48%; display: inline-block; margin: auto; text-align: center;">
+                <img style="width:20vw;" src="assets/imgs/database.JPG" />
+
+            </div>
+        </div>
+
+        <div class="section" id="futurePlans">
+            <div class="containerOrange">
+                <div style="width: 48%; display: inline-block; margin: auto; color:white;">
+                    <h2>Further developments</h2>
+                    <ul>
+                        <li>
+                            <h5>Goal Setting and reminder service (ie 10 mins everyday with notification at 10am to remind user).</h5>
+                        </li>
+                        <li>
+                            <h5>User Data sent to the Server's database for storage.</h5>
+                        </li>
+                        <li>
+                            <h5>Logic for not repeating words they guess correctly quickly.</h5>
+                        </li>
+                        <li>
+                            <h5>Integrated analytics to monitor user interactions.</h5>
+                        </li>
+                        <!--<li>
+                            <h5></h5>
+                        </li>
+                        <li>
+                            <h5></h5>
+                        </li>-->
+                        <li>
+                            <h5></h5>
+                        </li>
+                    </ul>
+                </div>
+                <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
+                    <img src="assets/imgs/thefuture.jpg" />
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="socialNav">
+                <nav>
+                    <ul>
+                        <li> <a href="https://github.com/sleepypioneer" target="blank"> <img class="logo" src="https://pbs.twimg.com/media/BeM2XAiCQAA91O-.png:large" alt="gitHub logo"> <h4 class="socialNav"> Visit me on GitHub </h4></a> </li>
+                        <li> <a href="https://twitter.com/sleepypioneer" target="blank"> <img class="logo" src="https://image.freepik.com/free-icon/twitter-logo_318-40459.jpg" alt="Twitter logo"> <h4 class="socialNav"> Follow me on Twitter </h4></a> </li>
+                        <li> <a href="https://de.linkedin.com/in/jessica0greene" target="blank"> <img class="logo" src="https://image.freepik.com/free-icon/linked-in-logo-on-black-square-background_318-40265.jpg" alt="Linked in logo"> <h4 class="socialNav"> Add me on Linked in </h4></a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <div class="phoneContainer">
+        <div class="smartphone">
+            <div class="content">
+                <iframe src="http://localhost/vocab_trainer/" style="width:100%;border:none;height:100%" />
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
