@@ -1,10 +1,57 @@
+/*****************************
+        General Styles
+*****************************/
+
 * { }
 
 body {
     font-family: 'Numans', sans-serif;
-
+    cursor:default;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
+}
+
+img {
+    width: 40vw;
+    height: auto;
+    margin: 0.5em;
+    border-radius: 5px;
+}
+
+.phoneImage {
+    border-top: white 12px solid;
+}
+
+ul {
+    padding: 0;
+}
+
+/*****************************
+        Text Styles
+*****************************/
+
+/* italic text class */
+.italic {
+    font-style: italic;    
+}
+
+/* center text class */
+.center {
+   text-align: center;
+}
+
+/* orange text class */
+.orange {
+    color: darkorange;    
+}
+
+/***********************************************
+        Device conatiner (iframe) Styles
+***********************************************/
 
 /* The device container*/
 .phoneContainer {
@@ -60,54 +107,9 @@ body {
   background: white;
 }
 
-img {
-    width: 40vw;
-    height: auto;
-    margin: 0.5em;
-}
-
-nav.webpage {
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    height: 8vh;
-    display: flex;
-    background-color: #359C8C;
-    /* background: linear-gradient(180deg, rgba(53, 156, 140,1), rgba(53, 156, 140,0.7)); */
-    box-shadow: 0 2px 7px 0px rgba(121, 120, 119, 0.74);
-}
-
-.webpage .rowNav {
-    display: flex;
-    justify-content: space-between;
-    /*padding: 0 1em;*/
-    align-items: center;
-}
-
-/* icons in top bar*/
-
-.webpage .topbar {
-    width: 100%;
-}
-
-.webpage .topbar li {
-    color: #022B3A;
-    font-size: 2em;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-}
-
-/* pts & timer in top bar*/
-
-.webpage .topbar li h4 {
-    font-size: 2em;
-    margin: 0 0.5em;
-}
+/*****************************
+        Container Styles
+*****************************/
 
 #mainContainer {
     margin-top: 10vh
@@ -124,6 +126,7 @@ nav.webpage {
     min-height: 800px;
 }
 
+/* main container with light grey/ off white background colour */
 .containerWhite {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -133,6 +136,7 @@ nav.webpage {
     margin:auto;
 }
 
+/* container with orange background colour */
 .containerOrange {
     border-radius: 5px;
     background-color: rgba(255, 119, 35, 0.74);
@@ -143,6 +147,7 @@ nav.webpage {
     color: white;
 }
 
+/* container with green background colour */
 .containerGreen {
     border-radius: 5px;
     background-color: #359c8c;
@@ -152,16 +157,89 @@ nav.webpage {
     color: white;
 }
 
+/*****************************
+        Nav Styles
+*****************************/
+
+nav.webpage {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 8vh;
+    display: flex;
+    background-color: #359C8C;
+    /* background: linear-gradient(180deg, rgba(53, 156, 140,1), rgba(53, 156, 140,0.7)); */
+    /* box-shadow: 0 2px 7px 0px rgba(121, 120, 119, 0.74); */
+}
+
+.webpage .rowNav {
+    display: flex;
+    justify-content: space-between;
+    /*padding: 0 1em;*/
+    align-items: center;
+}
+
+/* icons in top bar*/
+.webpage .topbar {
+    width: 100%;
+    display: flex;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    border-bottom: 0.2rem rgb(36, 114, 102) solid;
+    margin-bottom: 0;
+    font-size: x-small;
+    text-align: center;
+}
+
+.webpage .topbar li {
+    color: #022B3A;
+    font-size: 2em;
+    flex: 2;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.webpage .topbar li h4 {
+    font-size: 2em;
+    margin: 0 0.5em;
+}
+
+.webpage .topbar li.navBtn {
+    border: solid rgb(36, 114, 102) 2px;
+    width: 100%;
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 0.5rem;
+    margin: 4px;
+    justify-content: center;
+    font-size: large;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+}
+
+/*****************************
+        Social Nav Styles
+*****************************/
+
 /* Social Nav */
 .socialNav {
     display: inline-block;
     box-sizing: border-box;
 }
 
-.logo {
-  width: 3vw;
-  padding: 2px;
-  margin: auto;
+#social {
+    list-style: none;
 }
 
 #socialNav nav li {
@@ -178,24 +256,3 @@ nav.webpage {
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    opacity: 0.7;
-}
-
-
-/* italic text class */
-.italic {
-    font-style: italic;    
-}
-
-/* center text class */
-.center {
-   text-align: center;
-}
-
-/* orange text class */
-.orange {
-    color: darkorange;    
-}

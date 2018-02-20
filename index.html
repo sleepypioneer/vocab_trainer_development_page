@@ -33,14 +33,26 @@
         lookForResize();
     </script>
 
-    <nav class="webpage">
+    <nav id="pageNav" class="webpage">
         <ul class="rowNav topbar" style="display: flex;">
-            <li>
-
+            <li class="navBtn">
+                <a href="#whyPWA">PWA</a>
             </li>
 
-            <li>
-
+            <li class="navBtn">
+                <a href="#appUX">UX Design</a>    
+            </li>
+            
+            <li class="navBtn">
+                <a href="#appUI">UI Design</a>    
+            </li>
+            
+            <li class="navBtn">
+                <a href="#dataStorage">Databank Connections</a>    
+            </li>
+            
+            <li class="navBtn">
+                <a href="#futurePlans">Future Developments</a>    
             </li>
             <li id="social">
                 <div id="socialNav">
@@ -106,6 +118,7 @@
 
         <div class="section" id="whyPWA">
             <div class="containerGreen" style="display: flex;">
+                <a href="#pageNav" id="navigateToProjectsTop"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
                 <div style="width: 48%; display: inline-block; margin: auto; color:white;">
                     <h2>Why a Progressive Web App</h2>
                     <p class="italic center"> A new web Experience that works for everyone. Behaves and feels like a native App but is light weight (no large installation files), quick and works offline (/ with lowfi). </p>
@@ -143,6 +156,7 @@
 
         <div class="section" id="appUX" style="display:flex; flex-direction:column;">
             <div style="display:flex;padding: 1em;" >
+                <a href="#pageNav" id="navigateToProjectsTop"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
                 <div  style="display:flex;padding: 1em; width: 48%; display: inline-block; margin: auto;">
                     <h3>Intuiative layout navigates user quickly</h3>
                     <ul>
@@ -173,7 +187,7 @@
                     </ul>
                 </div>
                 <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                   <img src="assets/imgs/localhost_vocab_trainer_(iPhone%207edit).png" style="width: 30vw;margin: auto;">
+                   <img class="phoneImage" src="assets/imgs/vocabAppHomenumbered.png" style="width: 30vw;margin: auto;">
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -184,7 +198,8 @@
 
         <div class="section" id="appUI">
             <div class="containerGreen" style="display: flex;">
-                <div style="width: 48%; display: inline-block; margin: auto; ">
+                <a href="#pageNav" id="navigateToProjectsTop"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+                <div style="width: 48%; display:flex; flex-direction:column; margin: auto; ">
                     <h2>App Design and UI </h2>
                     <ul>
                         <li>
@@ -203,16 +218,20 @@
                             <h5>Sounds navigate the user</h5>
                         </li>
                     </ul>
+                    <div style="display: flex; align-items: center;">
+                        <img style="width:16vw; margin: 2rem auto;" src="assets/imgs/example2.jpg" />
+                        <img style="width:16vw; margin: 2rem auto;" src="assets/imgs/example5.jpg" />
+                    </div>
                 </div>
                 <div style="width: 48%; display: inline-block; margin: auto; text-align: center;">
-                    <img style="width:20vw;" src="assets/imgs/example2.jpg" />
-                    <img style="width:20vw;" src="assets/imgs/example5.jpg" />
+                    <img class="phoneImage" style="width:40vw;" src="assets/imgs/vocabAppTrainerWithKeyboard.JPG" />
                 </div>
             </div>
         </div>
 
         <div class="section" id="dataStorage">
             <div style="display:flex;padding: 1em;" >
+                <a href="#pageNav" id="navigateToProjectsTop"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
                 <div style="width: 48%; display: inline-block; margin: auto;">
                     <h2>Data Storage</h2>
                     <ul>
@@ -235,15 +254,17 @@
                 </div>
             </div>
             <div style="width: 48%; display: inline-block; margin: auto; text-align: center;">
-                <img style="width:20vw;" src="assets/imgs/database.JPG" />
+                <img class="phoneImage" style="width:40vw;" src="assets/imgs/vocabAppManageLists.JPG" />
 
             </div>
         </div>
 
         <div class="section" id="futurePlans">
             <div class="containerOrange">
+                <a href="#pageNav" id="navigateToProjectsTop"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
                 <div style="width: 48%; display: inline-block; margin: auto; color:white;">
-                    <h2>Further developments</h2>
+                    <h2>Future developments</h2>
+                    <h8 class="italic">Possible extensions or futher development under consideration for this App.</h8>
                     <ul>
                         <li>
                             <h5>Goal Setting and reminder service (ie 10 mins everyday with notification at 10am to remind user).</h5>
@@ -257,19 +278,10 @@
                         <li>
                             <h5>Integrated analytics to monitor user interactions.</h5>
                         </li>
-                        <!--<li>
-                            <h5></h5>
-                        </li>
-                        <li>
-                            <h5></h5>
-                        </li>-->
-                        <li>
-                            <h5></h5>
-                        </li>
                     </ul>
                 </div>
-                <div style="width: 48%; display: inline-block; margin: auto; text-align: right;">
-                    <img src="assets/imgs/thefuture.jpg" />
+                <div style="width: 48%; display: inline-block; margin: auto; text-align: center;">
+                    <img class="phoneImage" style="width:40vw;" src="assets/imgs/vocabAppScoreBoard.JPG" />
 
                 </div>
             </div>
